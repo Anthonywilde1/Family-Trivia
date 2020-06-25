@@ -24,12 +24,21 @@ before_action :find_question, only: [:show, :update, :destroy]
 
 
     def edit
-        @client = Client.find(params[:id])
+        @question = Question.find(params[:id])
+        
     end
 
-    def update
+    
       
+    
+    def update
+        @question = Question.find(params[:id])
+        @question.update(params[question_params])
+        redirect_to question_path(@question)
     end
+
+
+
 
     def destroy
 
