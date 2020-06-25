@@ -1,19 +1,53 @@
 <%= render "partials/menu" %>
 
-
+<h2>Please enter a single round of questions below</h2>
 <form action="/questions" method="POST">
 <input type="hidden" value="<%=form_authenticity_token %>" name="authenticity_token" />
-<% n = 1 %>
-<% 10.times do %>  
 
-<label> <legend> Question </legend> 
-<input type="text" name="qs<%=n%>" placeholder="Your question goes here" autocomplete="off">
-</label>
-<label><legend>Points</legend>
-<input type="number" name="points">
-</label>
-<% n+=1 %> 
+<%= form_with model: @question do |f| %>
+<ol>
+    <li>
+        <%= f.text_field :qs1 %>
+        <%= f.number_field(:points, in: 1.0..10.0, step: 1) %>
+    </li>
+    <li>
+        <%= f.text_field :qs2  %>
+        <%= f.number_field(:points, in: 1.0..10.0, step: 1) %>
+    </li>
+    <li>
+        <%= f.text_field :qs3 %>
+        <%= f.number_field(:points, in: 1.0..10.0, step: 1) %>
+    </li>
+    <li>
+        <%= f.text_field :qs4 %>
+        <%= f.number_field(:points, in: 1.0..10.0, step: 1) %>
+    </li>
+    <li>
+        <%= f.text_field :qs5 %>
+        <%= f.number_field(:points, in: 1.0..10.0, step: 1) %>
+   </li>
+   <li>
+        <%= f.text_field :qs6 %>
+        <%= f.number_field(:points, in: 1.0..10.0, step: 1) %>
+   </li>
+   <li>
+        <%= f.text_field :qs7 %>
+        <%= f.number_field(:points, in: 1.0..10.0, step: 1) %>
+   </li>
+   <li>
+        <%= f.text_field :qs8 %>
+        <%= f.number_field(:points, in: 1.0..10.0, step: 1) %>
+    </li>
+   <li>
+        <%= f.text_field :qs9 %>
+        <%= f.number_field(:points, in: 1.0..10.0, step: 1) %>
+   </li>
+   <li>
+        <%= f.text_field :qs10 %>
+        <%= f.number_field(:points, in: 1.0..10.0, step: 1) %>
+  </li>
+  </ol>
+  <%= f.submit "Generate Round" %>
 <% end %>
 
-<input type="submit" value="Generate Round">
 </form>
