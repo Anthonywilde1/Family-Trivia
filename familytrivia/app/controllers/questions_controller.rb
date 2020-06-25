@@ -14,7 +14,7 @@ before_action :find_question, only: [:show, :update, :destroy]
     end
 
     def create
-        @question = Question.new(params[:id])
+        @question = Question.new(question_params)
         if @question.save
             redirect_to '/questions'
         else
@@ -37,7 +37,7 @@ before_action :find_question, only: [:show, :update, :destroy]
 
     private
     def question_params
-        params.require(:question).permit(:qs1, :qs2, :qs3, :qs4, :qs5, :qs6, :qs7, :qs8, :qs9, :qs10, :age)
+        params.require(:question).permit(:qs1, :qs2, :qs3, :qs4, :qs5, :qs6, :qs7, :qs8, :qs9, :qs10, :points)
       end
     def find_question
         @question = Question.find(params[:id])
