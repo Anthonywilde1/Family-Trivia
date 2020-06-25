@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_25_014707) do
+ActiveRecord::Schema.define(version: 2020_06_25_043921) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,16 @@ ActiveRecord::Schema.define(version: 2020_06_25_014707) do
     t.integer "points"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "points1"
+    t.integer "points2"
+    t.integer "points3"
+    t.integer "points4"
+    t.integer "points5"
+    t.integer "points6"
+    t.integer "points7"
+    t.integer "points8"
+    t.integer "points9"
+    t.integer "points10"
   end
 
 end

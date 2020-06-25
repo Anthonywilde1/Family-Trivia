@@ -2,8 +2,8 @@
 
 <h1> Welcome Family </h1>
 <h3>
-<%= @questions.each do |question| %>
-<%= question %><br>
+<% @questions.each do |question| %>
+<%= question.qs1 %> <%= link_to "Show", question_path(question.id) %> <br>
 <% end %>
 </h3>
 

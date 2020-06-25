@@ -24,7 +24,7 @@ before_action :find_question, only: [:show, :update, :destroy]
 
 
     def edit
-
+        @client = Client.find(params[:id])
     end
 
     def update
@@ -37,7 +37,7 @@ before_action :find_question, only: [:show, :update, :destroy]
 
     private
     def question_params
-        params.require(:question).permit(:qs1, :qs2, :qs3, :qs4, :qs5, :qs6, :qs7, :qs8, :qs9, :qs10, :points)
+        params.require(:question).permit(:qs1, :qs2, :qs3, :qs4, :qs5, :qs6, :qs7, :qs8, :qs9, :qs10, :points1, :points2, :points3, :points4, :points5, :points6, :points7, :points8, :points9, :points10)
       end
     def find_question
         @question = Question.find(params[:id])
