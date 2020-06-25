@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_23_084910) do
+ActiveRecord::Schema.define(version: 2020_06_25_014707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "questions", force: :cascade do |t|
-    t.string "qs"
+    t.string "qs1"
+    t.string "qs2"
+    t.string "qs3"
+    t.string "qs4"
+    t.string "qs5"
+    t.string "qs6"
+    t.string "qs7"
+    t.string "qs8"
+    t.string "qs9"
+    t.string "qs10"
     t.integer "points"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -1,9 +1,27 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  qs: MyString
+  qs1: MyString
+  qs2: MyString
+  qs3: MyString
+  qs4: MyString
+  qs5: MyString
+  qs6: MyString
+  qs7: MyString
+  qs8: MyString
+  qs9: MyString
+  qs10: MyString
   points: 1
 
 two:
-  qs: MyString
+  qs1: MyString
+  qs2: MyString
+  qs3: MyString
+  qs4: MyString
+  qs5: MyString
+  qs6: MyString
+  qs7: MyString
+  qs8: MyString
+  qs9: MyString
+  qs10: MyString
   points: 1

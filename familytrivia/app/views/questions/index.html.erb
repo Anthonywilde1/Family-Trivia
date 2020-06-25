@@ -1,6 +1,10 @@
 <%= render "partials/menu" %>
 
 <h1> Welcome Family </h1>
+<h3>
+<%= @questions.each do |question| %>
+<%= question[:qs1] %>
+<%end%>
+</h3>
 
-<%= @questions %>
 
