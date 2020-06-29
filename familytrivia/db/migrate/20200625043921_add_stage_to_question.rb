@@ -10,5 +10,6 @@ class AddStageToQuestion < ActiveRecord::Migration[6.0]
     add_column :questions, :points8, :integer
     add_column :questions, :points9, :integer
     add_column :questions, :points10, :integer
+    
   end
 end

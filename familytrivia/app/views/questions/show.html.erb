@@ -2,34 +2,37 @@
 <h2> Round <%= @question.id %> </h2> 
 <ol>
     <li>
-        <%= @question[:qs1] %>
+        <%= @question[:qs1] %> <%= @question[:points1]%>
     </li>
     <li>
-        <%= @question[:qs2] %>
+        <%= @question[:qs2] %> <%= @question[:points2]%>
     </li>
     <li>
-        <%= @question[:qs3] %>
+        <%= @question[:qs3] %> <%= @question[:points3]%>
     </li>
     <li>
-        <%= @question[:qs4] %>
+        <%= @question[:qs4] %> <%= @question[:points4]%>
     </li>
     <li>
-        <%= @question[:qs5] %>
+        <%= @question[:qs5] %> <%= @question[:points5]%>
     </li>
     <li>
-        <%= @question[:qs6] %>
+        <%= @question[:qs6] %> <%= @question[:points6]%>
     </li>
     <li>
-        <%= @question[:qs7] %>
+        <%= @question[:qs7] %> <%= @question[:points7]%>
     </li>
     <li>
-        <%= @question[:qs8] %>
+        <%= @question[:qs8] %> <%= @question[:points8]%>
     </li>
     <li>
-        <%= @question[:qs9] %>
+        <%= @question[:qs9] %> <%= @question[:points9]%>
     </li>
     <li> 
-        <%= @question[:qs10] %>
+        <%= @question[:qs10] %> <%= @question[:points10]%>
     </li>
 </ol>
 <%= link_to "Edit", edit_question_path(@question) %>
+ <%= link_to 'Delete This', question_path(@question),
+              method: :delete,
+              data: { confirm: 'Thankyou, Next!' } %>

@@ -1,7 +1,7 @@
 <%= render 'partials/menu' %>
 
 <h2>Please edit all questions you want and hit submit</h2>
-<form action="/questions/<%= @question.id %>" method="PATCH">
+
 
 <input type="hidden" value="<%=form_authenticity_token %>" name="authenticity_token" />
 
@@ -9,43 +9,43 @@
 <ol>
     <li>
         <%= f.text_field :qs1 %>
-        <%= f.number_field(:points1, in: 1.0..10.0, step: 1) %>
+        <%= f.number_field(:points1, in: 1.0..10.0, step: 0.5) %>
     </li>
     <li>
         <%= f.text_field :qs2 %>
-        <%= f.number_field(:points2, in: 1.0..10.0, step: 1) %>
+        <%= f.number_field(:points2, in: 1.0..10.0, step:0.5) %>
     </li>
     <li>
         <%= f.text_field :qs3 %>
-        <%= f.number_field(:points3, in: 1.0..10.0, step: 1) %>
+        <%= f.number_field(:points3, in: 1.0..10.0, step:0.5) %>
     </li>
     <li>
         <%= f.text_field :qs4 %>
-        <%= f.number_field(:points4, in: 1.0..10.0, step: 1) %>
+        <%= f.number_field(:points4, in: 1.0..10.0, step:0.5) %>
     </li>
     <li>
         <%= f.text_field :qs5 %>
-        <%= f.number_field(:points5, in: 1.0..10.0, step: 1) %>
+        <%= f.number_field(:points5, in: 1.0..10.0, step:0.5) %>
    </li>
    <li>
         <%= f.text_field :qs6 %>
-        <%= f.number_field(:points6, in: 1.0..10.0, step: 1) %>
+        <%= f.number_field(:points6, in: 1.0..10.0, step:0.5) %>
    </li>
    <li>
         <%= f.text_field :qs7 %>
-        <%= f.number_field(:points7, in: 1.0..10.0, step: 1) %>
+        <%= f.number_field(:points7, in: 1.0..10.0, step:0.5) %>
    </li>
    <li>
         <%= f.text_field :qs8 %>
-        <%= f.number_field(:points8, in: 1.0..10.0, step: 1) %>
+        <%= f.number_field(:points8, in: 1.0..10.0, step:0.5) %>
     </li>
    <li>
         <%= f.text_field :qs9 %>
-        <%= f.number_field(:points9, in: 1.0..10.0, step: 1) %>
+        <%= f.number_field(:points9, in: 1.0..10.0, step:0.5) %>
    </li>
    <li>
         <%= f.text_field :qs10 %>
-        <%= f.number_field(:points10, in: 1.0..10.0, step: 1) %>
+        <%= f.number_field(:points10, in: 1.0..10.0, step:0.5) %>
   </li>
   </ol>
   <%= f.submit "Finish Editing" %>
