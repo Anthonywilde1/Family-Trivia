@@ -3,7 +3,7 @@
 <h1> Welcome Family </h1>
 <h3>
 <% @questions.each do |question| %>
-<%= question.qs1 %> <%= question.date_of_create %> <%= link_to "Show", question_path(question.id) %> <br>
+<%= question.qs1 %> <%= question["date_of_create"] %> <%= link_to "Show", question_path(question.id) %> <br>
 <% end %>
 </h3>
 
