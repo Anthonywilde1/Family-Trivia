@@ -1,35 +1,8 @@
 <%= render "partials/menu" %>
-<h2> Round <%= @question.id %> </h2> 
+<h2> Question<%= @question.id %> </h2> 
 <ol>
     <li>
-        <%= @question[:qs1] %> <%= @question[:points1]%>
-    </li>
-    <li>
-        <%= @question[:qs2] %> <%= @question[:points2]%>
-    </li>
-    <li>
-        <%= @question[:qs3] %> <%= @question[:points3]%>
-    </li>
-    <li>
-        <%= @question[:qs4] %> <%= @question[:points4]%>
-    </li>
-    <li>
-        <%= @question[:qs5] %> <%= @question[:points5]%>
-    </li>
-    <li>
-        <%= @question[:qs6] %> <%= @question[:points6]%>
-    </li>
-    <li>
-        <%= @question[:qs7] %> <%= @question[:points7]%>
-    </li>
-    <li>
-        <%= @question[:qs8] %> <%= @question[:points8]%>
-    </li>
-    <li>
-        <%= @question[:qs9] %> <%= @question[:points9]%>
-    </li>
-    <li> 
-        <%= @question[:qs10] %> <%= @question[:points10]%>
+        <%= @question["question"] %> <%= @question["answer"] %> <%= @question["points"] %>
     </li>
 </ol>
 <%= link_to "Edit", edit_question_path(@question) %>

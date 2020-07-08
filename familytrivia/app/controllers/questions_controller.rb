@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-before_action :find_question, only: [:show, :update, :destroy]
+before_action :find_question, only: [:show, :update, :destroy, :edit ]
 
     def index
        @questions = Question.all
@@ -14,7 +14,7 @@ before_action :find_question, only: [:show, :update, :destroy]
     end
 
     def create
-        @question = Question.new(question_params)
+        @question = Question.new#(question_params)
         if @question.save
             redirect_to '/questions'
         else
@@ -43,14 +43,14 @@ before_action :find_question, only: [:show, :update, :destroy]
     def destroy
         @question = Question.find(params[:id])
         @question.destroy
-      
         redirect_to "/questions"
     end
 
     private
     def question_params
-        params.require(:question).permit(:qs1, :qs2, :qs3, :qs4, :qs5, :qs6, :qs7, :qs8, :qs9, :qs10, :points1, :points2, :points3, :points4, :points5, :points6, :points7, :points8, :points9, :points10, :date_of_create)
-      end
+        params.require(:question).permit(:question, :answer, :points)
+    end
+    
     def find_question
         @question = Question.find(params[:id])
     end
