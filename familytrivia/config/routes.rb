@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
-  root 'rounds#Index'
-  get 'rounds/New', to: 'rounds#New'
-  get 'rounds/Show'
-  get 'rounds/Edit'
-  get 'rounds/Create'
-  get 'rounds/Destroy'
-  get 'rounds/Update'
+  resources :rounds
+
   resources :questions
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   #get '/questions', to: 'questions#index'

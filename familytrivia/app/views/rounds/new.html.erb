@@ -1,0 +1,10 @@
+<h1>Rounds#New</h1>
+
+<h2> Please enter a name for your round and some questions to populate it </h2>
+<form action="/rounds" method="POST">
+<input type="hidden" value="<%=form_authenticity_token %>" name="authenticity_token"/>
+
+<%= form_with model: @round do |r| %>
+<%= r.text_field :round_name, :required => true %>
+<%= r.submit "Name Round" %>
+<% end %>

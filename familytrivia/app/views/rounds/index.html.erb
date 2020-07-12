@@ -1,0 +1,9 @@
+<h1>Rounds#Index</h1>
+<p>Hello World </p>
+<p><%= link_to "Create Your Own", new_round_url %></p>
+<% @rounds.each do |round| %>
+<%= round[:round_name] %> <%= link_to "Show", round_url(round[:id]) %> <%= link_to "Edit", edit_round_url(round[:id])%>
+<%= link_to 'Delete This', round_url(round[:id]),
+              method: :delete,
+              data: { confirm: 'Thankyou, Next!' } %><br>
+<% end %>      
