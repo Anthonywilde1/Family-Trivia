@@ -14,11 +14,11 @@ before_action :find_question, only: [:show, :update, :destroy, :edit ]
     end
 
     def create
-        @question = Question.new#(question_params)
+        @question = Question.new(question_params)
         if @question.save
-            redirect_to '/questions'
+            redirect_to @question.round
         else
-            render "new"
+            render :new
         end
     end
 
@@ -48,7 +48,7 @@ before_action :find_question, only: [:show, :update, :destroy, :edit ]
 
     private
     def question_params
-        params.require(:question).permit(:question, :answer, :points)
+        params.require(:question).permit(:question, :answer, :points, :round_id)
     end
     
     def find_question

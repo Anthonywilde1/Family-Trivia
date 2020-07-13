@@ -1,1 +1,2 @@
 <h1> Round <%= @round.round_name %> </h1>
+<%= link_to "Create some questions", new_round_question_path(@round, @question) %>

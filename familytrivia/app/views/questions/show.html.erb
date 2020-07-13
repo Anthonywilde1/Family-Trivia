@@ -1,11 +1,7 @@
-<%= render "partials/menu" %>
+
 <h2> Question<%= @question.id %> </h2> 
 <ol>
     <li>
         <%= @question["question"] %> <%= @question["answer"] %> <%= @question["points"] %>
     </li>
 </ol>
-<%= link_to "Edit", edit_question_path(@question) %>
- <%= link_to 'Delete This', question_path(@question),
-              method: :delete,
-              data: { confirm: 'Thankyou, Next!' } %>

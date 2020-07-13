@@ -1,18 +1,18 @@
-<%= render "partials/menu" %>
 
-<h2>Please enter a single round of questions below</h2>
-<form action="/questions" method="POST">
-<input type="hidden" value="<%=form_authenticity_token %>" name="authenticity_token" />
 
-<%= form_with model: @question do |f| %>
+<h2>Please enter a single question below</h2>
+
+<%= form_with scope: :question, url: round_questions_path do |f| %>
+
 <ol>
     <li>
+        <%= f.hidden_field :round_id %>
         <%= f.text_field :question, :required => true %>
         <%= f.text_field :answer, :required => true %>
         <%= f.number_field :points, in: 1.0..10.0, step: 0.5, :required => true %>
     </li>    
 </ol>
-<%= f.submit "Generate Round" %>
-<% end %>
+<%= f.submit "Generate Question" %>
 
-</form>
+
+<% end %>
